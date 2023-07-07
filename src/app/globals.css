@@ -39,12 +39,14 @@ input::placeholder {
   0% {
     transform: translateX(-50%) translateY(-50%) translateZ(-50%);
     opacity: 1;
+    width: 4rem;
+    height: 4rem;
   }
   100% {
     transform: translateX(-50%) translateY(-50%) translateZ(-50%);
     opacity: 0;
-    width: 11rem;
-    height: 11rem;
+    width: 9rem;
+    height: 9rem;
   }
 }
 

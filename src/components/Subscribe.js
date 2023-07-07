@@ -1,6 +1,5 @@
 "use client";
 
-import Button from "@mui/material/Button";
 import { useState } from "react";
 
 const Subscribe = () => {
@@ -22,13 +21,13 @@ const Subscribe = () => {
               placeholder="Enter your email address"
               className=" rounded-full bg-white px-3 py-4 text-center sm:text-left sm:p-6 border-none outline-none w-full font-[500] text-black"
             />
-            <Button
+            <button
               variant="outlined"
               onClick={() => setBtnText("Submitting...")}
               className="sm:w-fit w-full mt-2 sm:mt-0 capitalize sm:absolute sm:top-2 md:top-[.4rem] sm:right-2 md:text-base text-sm hover:border-2 border-2 border-transparent font-semibold py-4 px-7 text-white bg-rose-500 sm:bg-rose-600 hover:border-rose-600 hover:bg-rose-700 sm:hover:bg-rose-600 hover:shadow-2xl hover:shadow-rose-600  rounded-full"
             >
               {btnText}
-            </Button>
+            </button>
           </div>
         </div>
       </div>
