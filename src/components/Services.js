@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
-import IconButton from "@mui/material/IconButton";
 import Link from "next/link";
 
 const ServiceCard = ({ imgSrc, title, desc }) => {
@@ -35,15 +34,12 @@ const Services = () => {
             alt="video banner"
             className="object-cover w-full"
           />
-          <IconButton
-            aria-label="play_icon"
-            className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-          >
+          <button className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <Link href={"https://youtu.be/aVNa8Dka5MA"} target="_blank">
               <span className="playButton duration-700 w-full h-full bg-rose-500 rounded-full block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></span>
               <PlayArrowIcon className="text-7xl md:text-[7rem] text-white bg-[#ffffffb8] rounded-full" />
             </Link>
-          </IconButton>
+          </button>
         </div>
         <div className="flex gap-5 md:gap-10 flex-col flex-1">
           <div className="flex flex-col gap-4">

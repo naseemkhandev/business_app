@@ -1,4 +1,3 @@
-import Button from "@mui/material/Button";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -18,14 +17,11 @@ const HeroSection = () => {
           victory of the managements that supplies best design system guidelines
           ever.
         </p>
-        <Button
-          variant="outlined"
-          className="md:text-base text-sm hover:border-2 border-2 border-transparent font-semibold py-3 px-8 md:px-10 text-white bg-rose-600 hover:border-rose-600 hover:text-rose-600 rounded-full"
-        >
+        <button className="md:text-base text-sm hover:border-2 border-2 border-transparent font-semibold py-3 px-8 md:px-10 text-white bg-rose-600 hover:border-rose-600 hover:bg-transparent hover:text-rose-600 rounded-full">
           <Link href="https://github.com/NaseemKhan005" target="_blank">
             Explore
           </Link>
-        </Button>
+        </button>
       </div>
       <div className="w-full relative">
         <div className="before:w-full before:h-full before:absolute before:top-0 before:left-0 before:bg-[url('/herobg1.png')] before:bg-left-bottom before:bg-contain before:bg-no-repeat before:-z-50 after:w-full after:h-full after:absolute after:top-0 after:left-0 after:bg-[url('/herobg2.png')] after:bg-right after:bg-contain after:bg-no-repeat after:-z-50">

@@ -1,6 +1,5 @@
 "use client";
 import NorthRoundedIcon from "@mui/icons-material/NorthRounded";
-import IconButton from "@mui/material/IconButton";
 import { useEffect, useRef } from "react";
 
 const ScrollTop = () => {
@@ -25,14 +24,14 @@ const ScrollTop = () => {
 
   return (
     <div className="overflow-hidden">
-      <IconButton
+      <button
         aria-label="arrow"
-        className={`fixed bottom-4 -right-full transition-all duration-500 shadow-2xl shadow-black bg-white hover:bg-[#fbfbfb] p-2 rounded`}
+        className={`fixed bottom-4 -right-full transition-all duration-500 shadow-2xl shadow-black text-gray-500 bg-white hover:bg-[#ececec] p-2 rounded`}
         onClick={scrollToTop}
         ref={arrow}
       >
         <NorthRoundedIcon />
-      </IconButton>
+      </button>
     </div>
   );
 };

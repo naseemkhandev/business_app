@@ -1,4 +1,3 @@
-import Button from "@mui/material/Button";
 import Image from "next/image";
 
 const CoreFeatures = () => {
@@ -15,12 +14,9 @@ const CoreFeatures = () => {
           Get your tests delivered at let home collect sample from the victory
           of the managements that supplies best design system guidelines ever.
         </p>
-        <Button
-          variant="outlined"
-          className="mt-5 w-fit md:text-base text-sm hover:border-2 border-2 border-transparent font-semibold py-3 px-8 md:px-10 text-white bg-rose-600 hover:border-rose-600 hover:bg-rose-600 hover:shadow-rose-600 hover:shadow-2xl rounded-full"
-        >
+        <button className="mt-5 w-fit md:text-base text-sm hover:border-2 border-2 border-transparent font-semibold py-3 px-8 md:px-10 text-white bg-rose-600 hover:border-rose-600 hover:bg-rose-600 hover:shadow-rose-600 hover:shadow-2xl rounded-full">
           Explore
-        </Button>
+        </button>
       </div>
 
       <div className="flex-1 relative w-full">

@@ -1,6 +1,5 @@
 "use client";
 
-import Button from "@mui/material/Button";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { useState } from "react";
 
@@ -33,9 +32,9 @@ const PricingCard = ({ name, title, price, btnText, trail }) => {
             /Monthly
           </span>
         </h2>
-        <Button className="w-fit capitalize text-base hover:bg-rose-600 hover:shadow-md hover:shadow-rose-600 hover:border-2 border-2 border-transparent py-3 px-6 text-white bg-rose-600 hover:border-rose-600 hover:text-white rounded-full">
+        <button className="w-fit capitalize text-base hover:bg-rose-600 hover:shadow-md hover:shadow-rose-600 hover:border-2 border-2 border-transparent py-3 px-6 text-white bg-rose-600 hover:border-rose-600 hover:text-white rounded-full">
           {btnText}
-        </Button>
+        </button>
         <span className="block text-rose-600 mt-5 font-semibold animate-bounce cursor-pointer">
           {trail}
         </span>
@@ -59,25 +58,25 @@ const Pricing = () => {
       <div className="relative transition-all flex gap-1 mx-auto w-fit bg-slate-100 p-2 rounded-full">
         <div
           className={`${
-            plan === "Monthly Plan" ? "left-2" : "left-[150px] w-[132px]"
-          } transition-all duration-500 absolute top-[.37rem] h-[52px] w-[138px] rounded-full bg-rose-600`}
+            plan === "Monthly Plan" ? "left-2" : "left-[150px] w-[130px]"
+          } transition-all duration-500 absolute top-[.37rem] h-[55px] w-[138px] rounded-full bg-rose-600`}
         ></div>
-        <Button
+        <button
           onClick={() => setPlan("Monthly Plan")}
           className={`
           ${plan === "Monthly Plan" ? "text-white" : "text-rose-600"}
-          capitalize text-base hover:border-2 border-2 border-transparent py-3 px-5 hover:border-rose-600 rounded-full`}
+          z-[1] capitalize text-base hover:border-2 border-2 border-transparent py-3 px-5 hover:border-rose-600 rounded-full`}
         >
           Monthly Plan
-        </Button>
-        <Button
+        </button>
+        <button
           onClick={() => setPlan("Annual Plan")}
           className={`
           ${plan === "Annual Plan" ? "text-white" : "text-rose-600"}
-          capitalize text-base hover:border-2 border-2 border-transparent py-3 px-5 hover:border-rose-600 rounded-full`}
+          z-[1] capitalize text-base hover:border-2 border-2 border-transparent py-3 px-5 hover:border-rose-600 rounded-full`}
         >
           Annual Plan
-        </Button>
+        </button>
       </div>
 
       {plan === "Monthly Plan" ? (
