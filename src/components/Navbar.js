@@ -32,6 +32,10 @@ const Navbar = () => {
     };
   }, []);
 
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <div
       ref={navbar}
