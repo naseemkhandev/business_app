@@ -22,8 +22,8 @@ const Navbar = () => {
   const navbar = useRef();
 
   useEffect(() => {
-    setMounted(true);
     window.onscroll = () => {
+      setMounted(true);
       if (window.pageYOffset >= 200) {
         navbar.current.classList.add("shadow");
       } else {
@@ -31,10 +31,6 @@ const Navbar = () => {
       }
     };
   }, []);
-
-  if (!mounted) {
-    return null;
-  }
 
   return (
     <div

@@ -6,14 +6,14 @@ const ButtonGroup = ({ next, previous }) => {
     <div className="flex items-center mx-auto">
       <IconButton
         aria-label="play_icon"
-        className="hover:text-rose-600 text-neutral-400"
+        className="hover:text-rose-600 text-neutral-200"
         onClick={previous}
       >
         <KeyboardBackspaceOutlinedIcon className="text-3xl " />
       </IconButton>
       <IconButton
         aria-label="play_icon"
-        className="hover:text-rose-600 text-neutral-400 rotate-180"
+        className="hover:text-rose-600 text-neutral-200 rotate-180"
         onClick={next}
       >
         <KeyboardBackspaceOutlinedIcon className="text-3xl " />
