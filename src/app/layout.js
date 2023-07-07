@@ -1,9 +1,8 @@
-import Footer from "@/components/Footer";
 import "./globals.css";
-import { Inter } from "next/font/google";
-import Navbar from "@/components/Navbar";
+import { DM_Sans } from "next/font/google";
+import ThemeProvider from "@/components/ThemeProvider";
 
-const inter = Inter({ subsets: ["latin"] });
+const dmSans = DM_Sans({ subsets: ["latin"], weight: ["400", "500", "700"] });
 
 export const metadata = {
   title: "Business App - Naseem Khan",
@@ -13,12 +12,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="container mx-auto">
-          <Navbar />
-          {children}
-          <Footer />
-        </div>
+      <body className={dmSans.className}>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

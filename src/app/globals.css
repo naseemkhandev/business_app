@@ -1,3 +1,57 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.service-name {
+  @apply text-rose-600 uppercase block font-semibold text-sm tracking-widest;
+}
+
+.title {
+  @apply capitalize text-2xl sm:text-3xl font-semibold my-3;
+}
+
+.rotate {
+  transform: rotateX(180deg);
+}
+
+.team-card:hover :is(h2, p) {
+  color: #e11d48;
+}
+
+.team-card:hover .icons {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+input::placeholder {
+  color: #e11d48;
+}
+
+@keyframes playPluse {
+  0% {
+    transform: translateX(-50%) translateY(-50%) translateZ(-50%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) translateZ(-50%);
+    opacity: 0;
+    width: 11rem;
+    height: 11rem;
+  }
+}
+
+.playButton {
+  animation: playPluse 1.5s ease-out infinite;
+}
+
+.scrollbar::-webkit-scrollbar {
+  height: 0;
+}
