@@ -21,19 +21,28 @@ const Footer = () => {
               accusantium.
             </p>
             <div className="flex mt-8 space-x-6">
-              <Link href={"/"}>
+              <Link
+                href="https://www.facebook.com/profile.php?id=100017192357822&sk"
+                target="_blank"
+              >
                 <FacebookOutlinedIcon className="hover:text-rose-600 hover:-translate-y-1 transition-all" />
               </Link>
-              <Link href={"/"}>
+              <Link href="https://github.com/NaseemKhan005" target="_blank">
                 <GitHubIcon className="hover:text-rose-600 hover:-translate-y-1 transition-all" />
               </Link>
-              <Link href={"/"}>
+              <Link
+                href="https://www.linkedin.com/in/naseem-khan-275275258/"
+                target="_blank"
+              >
                 <LinkedInIcon className="hover:text-rose-600 hover:-translate-y-1 transition-all" />
               </Link>
-              <Link href={"/"}>
+              <Link href="https://twitter.com/NaseemK69128903" target="_blank">
                 <TwitterIcon className="hover:text-rose-600 hover:-translate-y-1 transition-all" />
               </Link>
-              <Link href={"/"}>
+              <Link
+                href="https://www.instagram.com/naseem_khan005/"
+                target="_blank"
+              >
                 <InstagramIcon className="hover:text-rose-600 hover:-translate-y-1 transition-all" />
               </Link>
             </div>
@@ -158,9 +167,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <p className="mt-8 text-xs">
-          © 2022 Naseem Khan - All rights reserved
-        </p>
+        <p className="mt-8 text-xs">© 2022 Naseem Khan - All rights reserved</p>
       </div>
     </footer>
   );
