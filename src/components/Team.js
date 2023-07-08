@@ -2,6 +2,7 @@ import Image from "next/image";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import Link from "next/link";
 
 const TeamCard = ({ imgSrc, name, title }) => {
   return (
@@ -16,9 +17,21 @@ const TeamCard = ({ imgSrc, name, title }) => {
       <h2 className="text-base sm:text-xl font-semibold text-center">{name}</h2>
       <p className="text-center sm:text-base text-sm">{title}</p>
       <div className="flex md:flex-col gap-3 md:absolute md:bottom-12 md:right-8 md:translate-y-10 icons md:transition-all md:duration-500 md:opacity-0 mx-auto md:mx-0 md:text-rose-600">
-        <FacebookRoundedIcon className="text-xl hover:text-rose-600 cursor-pointer md:hover:text-gray-500" />
-        <GitHubIcon className="text-xl hover:text-rose-600 cursor-pointer md:hover:text-gray-500" />
-        <LinkedInIcon className="text-xl hover:text-rose-600 cursor-pointer md:hover:text-gray-500" />
+        <Link
+          target="_blank"
+          href="https://www.facebook.com/profile.php?id=100017192357822&sk"
+        >
+          <FacebookRoundedIcon className="text-xl hover:text-rose-600 cursor-pointer md:hover:text-gray-500" />
+        </Link>
+        <Link target="_blank" href="https://github.com/NaseemKhan005">
+          <GitHubIcon className="text-xl hover:text-rose-600 cursor-pointer md:hover:text-gray-500" />
+        </Link>
+        <Link
+          target="_blank"
+          href="https://www.linkedin.com/in/naseem-khan-275275258/"
+        >
+          <LinkedInIcon className="text-xl hover:text-rose-600 cursor-pointer md:hover:text-gray-500" />
+        </Link>
       </div>
     </div>
   );

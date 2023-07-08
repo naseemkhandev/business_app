@@ -2,6 +2,9 @@
 
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { useState } from "react";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import ButtonGroup from "./ButtonGroup";
 
 const Plan = ({ title }) => {
   return (
@@ -14,7 +17,7 @@ const Plan = ({ title }) => {
 
 const PricingCard = ({ name, title, price, btnText, trail }) => {
   return (
-    <div className="w-80 lg:w-full p-10 transition-all hover:shadow-2xl flex flex-col gap-12 rounded-3xl border-neutral-200 border">
+    <div className="mx-2 md:mx-3 cursor-pointer p-10 transition-all hover:shadow-lg flex flex-col gap-12 rounded-3xl border-neutral-200 border">
       <div className="flex flex-col gap-3">
         <h2 className="text-xl font-semibold capitalize">{name}</h2>
         <span className="text-neutral-500">{title}</span>
@@ -58,7 +61,7 @@ const Pricing = () => {
       <div className="relative transition-all flex gap-1 mx-auto w-fit bg-slate-100 p-2 rounded-full">
         <div
           className={`${
-            plan === "Monthly Plan" ? "left-2" : "left-[150px] w-[130px]"
+            plan === "Monthly Plan" ? "left-2" : "left-[150px] w-[128px]"
           } transition-all duration-500 absolute top-[.37rem] h-[55px] w-[138px] rounded-full bg-rose-600`}
         ></div>
         <button
@@ -80,78 +83,106 @@ const Pricing = () => {
       </div>
 
       {plan === "Monthly Plan" ? (
-        <div className="overflow-auto scrollbar">
-          <div className="flex item-start justify-between lg:grid lg:grid-cols-3 gap-7 mt-5 ">
-            <div className="">
-              <PricingCard
-                name="Free Plan"
-                title="For Small teams or office"
-                price="0"
-                btnText="Start free trail"
-              />
-            </div>
-            <div>
-              <PricingCard
-                name="Business king"
-                title="For Enterprise business"
-                price="15"
-                btnText="Create account"
-                trail="Or Start 14 Days trail"
-              />
-            </div>
-            <div className="relative">
-              <span className="absolute -top-4 left-10 bg-rose-600 text-white px-2 py-1 rounded-md">
-                Suggested
-              </span>
-              <PricingCard
-                name="Pro Master"
-                title="For pro level developers"
-                price="24"
-                btnText="Create account"
-                trail="Or Start 14 Days trail"
-                suggested="Suggested"
-              />
-            </div>
+        <Carousel {...carouselParams}>
+          <PricingCard
+            name="Free Plan"
+            title="For Small teams or office"
+            price="0"
+            btnText="Start free trail"
+          />
+          <PricingCard
+            name="Business king"
+            title="For Enterprise business"
+            price="15"
+            btnText="Create account"
+            trail="Or Start 14 Days trail"
+          />
+          <div className="relative">
+            <span className="absolute -top-1 left-10 bg-rose-600 text-white px-2 py-1 rounded-md">
+              Suggested
+            </span>
+            <PricingCard
+              name="Pro Master"
+              title="For pro level developers"
+              price="24"
+              btnText="Create account"
+              trail="Or Start 14 Days trail"
+            />
           </div>
-        </div>
+        </Carousel>
       ) : (
-        <div className="overflow-auto scrollbar">
-          <div className="flex item-start justify-between lg:grid lg:grid-cols-3 gap-7 mt-5 ">
-            <div>
-              <PricingCard
-                name="Free Plan"
-                title="For Small teams or office"
-                price="0"
-                btnText="Start free trail"
-              />
-            </div>
-            <div>
-              <PricingCard
-                name="Business/Company"
-                title="For Enterprise business"
-                price="25"
-                btnText="Create account"
-                trail="Or Start 10 Days trail"
-              />
-            </div>
-            <div className="relative">
-              <span className="absolute -top-4 left-10 bg-rose-600 text-white px-2 py-1 rounded-md">
-                Suggested
-              </span>
-              <PricingCard
-                name="Pro Master"
-                title="For pro level developers"
-                price="54"
-                btnText="Create account"
-                trail="Or Start 10 Days trail"
-                suggested="Suggested"
-              />
-            </div>
+        <Carousel {...carouselParams}>
+          <PricingCard
+            name="Free Plan"
+            title="For Small teams or office"
+            price="0"
+            btnText="Start free trail"
+          />
+          <PricingCard
+            name="Business/Company"
+            title="For Enterprise business"
+            price="25"
+            btnText="Create account"
+            trail="Or Start 10 Days trail"
+          />
+          <div className="relative">
+            <span className="absolute -top-1 left-10 bg-rose-600 text-white px-2 py-1 rounded-md">
+              Suggested
+            </span>
+            <PricingCard
+              name="Pro Master"
+              title="For pro level developers"
+              price="54"
+              btnText="Create account"
+              trail="Or Start 10 Days trail"
+            />
           </div>
-        </div>
+        </Carousel>
       )}
     </section>
   );
 };
 
 export default Pricing;
+
+const responsive = {
+  superLargeDesktop: {
+    breakpoint: { max: 4000, min: 3000 },
+    items: 4,
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+  },
+};
+
+const carouselParams = {
+  additionalTransfrom: 0,
+  arrows: false,
+  autoPLaySpeed: 3000,
+  centerMode: false,
+  className: "",
+  containerClass: "carousel-container",
+  customButtonGroup: <ButtonGroup />,
+  dotListClass: "",
+  draggable: true,
+  focusOnSelect: false,
+  infinite: true,
+  itemClass: "",
+  keyBoardControl: true,
+  minimumTouchDrag: 80,
+  renderButtonGroupOutside: true,
+  renderDotsOutside: false,
+  responsive: responsive,
+  showDots: false,
+  sliderClass: "",
+  slidesToSlide: 1,
+};

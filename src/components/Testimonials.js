@@ -27,7 +27,8 @@ const Card = ({ star, title, imgSrc }) => {
         <div>
           <h3 className="font-semibold">Naseem Khan</h3>
           <Link
-            href={"www.github.com/NaseemKhan005/"}
+            href="https://github.com/NaseemKhan005"
+            target="_blank"
             className="text-rose-600 font-[500]"
           >
             @naseemkhan
